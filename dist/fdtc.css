@@ -1,5 +1,5 @@
 /* FDTC Design System bundle
-   Built: 2025-11-07 10:27:30-05:00
+   Built: 2025-11-07 10:36:53-05:00
    Entry: src\index.css
 */
 :root{
@@ -28,6 +28,21 @@ body{margin:0;background:var(--color-bg);color:var(--color-surface-contrast);fon
 .u-justify-between{justify-content:space-between}.u-gap-4{gap:16px}
 .u-surface{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:16px}
 .u-wrap{flex-wrap:wrap}
+
+/* Grid used by Employee Links */
+.u-grid-2 {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: .5rem;
+    grid-auto-rows: minmax(2.25rem, auto);
+}
+.u-col-span-full { grid-column: 1 / -1; }
+
+/* Sizing/spacing helpers referenced by the JSX */
+.u-w-full { width: 100%; }
+.u-center { display: flex; align-items: center; justify-content: center; }
+.u-gap-2 { gap: .5rem; }
+.u-wrap { flex-wrap: wrap; }   /* from earlier step; keep once */
 
 .fdtc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border-radius:var(--radius-md);border:1px solid transparent;background:var(--color-primary);color:#fff;font:600 var(--fs-14)/1 var(--font-sans);cursor:pointer}
 .fdtc-btn--accent{background:var(--fdtc-sky-100);color:#03273f;border-color:#9fd0ef}
@@ -68,6 +83,36 @@ body{margin:0;background:var(--color-bg);color:var(--color-surface-contrast);fon
 .fdtc-term--overdue{background:#e95530;color:#000}      /* orange */
 .fdtc-term--total{background:#0078c9;color:#fff}        /* brand blue */
 
+/* --- Employee Links variants --- */
+
+/* Light-blue "Category" button */
+.fdtc-btn--soft {
+    background: #def1fb;
+    border-color: #cfe6f6;
+    color: #002b49;
+}
+
+/* Square icon button (used for Back) */
+.fdtc-iconbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: .5rem;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    font: 600 1rem/1 var(--font-sans);
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    background: var(--color-primary, #0078c9);
+    color: #fff;
+}
+.fdtc-iconbtn:focus-visible { outline: 2px solid rgba(0,0,0,.35); outline-offset: 3px; }
+
+/* Link-like button already exists (.fdtc-btn--link); ensure inline sizing */
+.fdtc-btn--link { display: inline-block; }
+
 .fdtc-card{display:flex;flex-direction:column;background:var(--color-surface);color:var(--color-surface-contrast);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:16px;min-height:100%}
 .fdtc-card__header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
 .fdtc-card__title{font:600 var(--fs-18)/1.2 var(--font-sans)}
@@ -84,4 +129,19 @@ body{margin:0;background:var(--color-bg);color:var(--color-surface-contrast);fon
 @keyframes fdtc-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
 .fdtc-scrollhint__chevron{display:inline-block;animation:fdtc-bounce 1.2s ease-in-out infinite}
 @media (prefers-reduced-motion: reduce){ .fdtc-scrollhint__chevron{animation:none} }
+
+/* Non-interactive gold header pill (auto-fit label lives inside) */
+.fdtc-pill {
+    background: #f8df7a;
+    color: #000;
+    min-height: 2.25rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    padding: 0 .75rem;
+    user-select: none;
+    pointer-events: none;
+}
 

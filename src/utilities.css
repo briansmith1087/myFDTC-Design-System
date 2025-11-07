@@ -2,3 +2,18 @@
 .u-justify-between{justify-content:space-between}.u-gap-4{gap:16px}
 .u-surface{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:16px}
 .u-wrap{flex-wrap:wrap}
+
+/* Grid used by Employee Links */
+.u-grid-2 {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: .5rem;
+    grid-auto-rows: minmax(2.25rem, auto);
+}
+.u-col-span-full { grid-column: 1 / -1; }
+
+/* Sizing/spacing helpers referenced by the JSX */
+.u-w-full { width: 100%; }
+.u-center { display: flex; align-items: center; justify-content: center; }
+.u-gap-2 { gap: .5rem; }
+.u-wrap { flex-wrap: wrap; }   /* from earlier step; keep once */

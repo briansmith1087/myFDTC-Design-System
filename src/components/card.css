@@ -14,3 +14,18 @@
 @keyframes fdtc-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
 .fdtc-scrollhint__chevron{display:inline-block;animation:fdtc-bounce 1.2s ease-in-out infinite}
 @media (prefers-reduced-motion: reduce){ .fdtc-scrollhint__chevron{animation:none} }
+
+/* Non-interactive gold header pill (auto-fit label lives inside) */
+.fdtc-pill {
+    background: #f8df7a;
+    color: #000;
+    min-height: 2.25rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    padding: 0 .75rem;
+    user-select: none;
+    pointer-events: none;
+}

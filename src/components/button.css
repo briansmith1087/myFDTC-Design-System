@@ -36,3 +36,33 @@
 .fdtc-term--ok{background:#f8df7a;color:#002b49}         /* yellow */
 .fdtc-term--overdue{background:#e95530;color:#000}      /* orange */
 .fdtc-term--total{background:#0078c9;color:#fff}        /* brand blue */
+
+/* --- Employee Links variants --- */
+
+/* Light-blue "Category" button */
+.fdtc-btn--soft {
+    background: #def1fb;
+    border-color: #cfe6f6;
+    color: #002b49;
+}
+
+/* Square icon button (used for Back) */
+.fdtc-iconbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: .5rem;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    font: 600 1rem/1 var(--font-sans);
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    background: var(--color-primary, #0078c9);
+    color: #fff;
+}
+.fdtc-iconbtn:focus-visible { outline: 2px solid rgba(0,0,0,.35); outline-offset: 3px; }
+
+/* Link-like button already exists (.fdtc-btn--link); ensure inline sizing */
+.fdtc-btn--link { display: inline-block; }
