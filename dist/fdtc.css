@@ -1,0 +1,42 @@
+/* FDTC Design System bundle
+   Built: 2025-11-07 09:14:46-05:00
+   Entry: src\index.css
+*/
+:root{
+    --fdtc-navy:#002b49;
+    --fdtc-blue:#0078c9;
+    --fdtc-yellow:#f8df7a;
+    --fdtc-orange:#e95530;
+    --fdtc-sky-100:#def1fb;
+    --font-sans:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    --fs-14:14px; --fs-18:18px;
+    --radius-md:10px; --radius-lg:16px;
+    --color-bg:var(--fdtc-navy);
+    --color-surface:#0e354e;
+    --color-surface-contrast:#ffffff;
+    --color-border:#29465f;
+    --color-primary:var(--fdtc-blue);
+    --color-danger:var(--fdtc-orange);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;background:var(--color-bg);color:var(--color-surface-contrast);font-family:var(--font-sans);font-size:var(--fs-14);line-height:1.45;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+:where(button,a,[tabindex]):focus-visible{outline:2px solid var(--fdtc-yellow);outline-offset:2px;border-radius:6px}
+
+.u-flex{display:flex}.u-flex-col{flex-direction:column}.u-items-center{align-items:center}
+.u-justify-between{justify-content:space-between}.u-gap-4{gap:16px}
+.u-surface{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:16px}
+
+.fdtc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border-radius:var(--radius-md);border:1px solid transparent;background:var(--color-primary);color:#fff;font:600 var(--fs-14)/1 var(--font-sans);cursor:pointer}
+.fdtc-btn--accent{background:var(--fdtc-sky-100);color:#03273f;border-color:#9fd0ef}
+.fdtc-btn--danger{background:var(--color-danger)}
+.fdtc-btn--sm{min-height:32px;padding:0 12px}
+.fdtc-btn:disabled{opacity:.6;cursor:not-allowed}
+
+.fdtc-card{display:flex;flex-direction:column;background:var(--color-surface);color:var(--color-surface-contrast);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:16px;min-height:100%}
+.fdtc-card__header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
+.fdtc-card__title{font:600 var(--fs-18)/1.2 var(--font-sans)}
+.fdtc-card__body{flex:1 1 auto;min-height:0}
+.fdtc-card__footer{margin-top:16px;display:flex;justify-content:flex-end;gap:8px}
+
