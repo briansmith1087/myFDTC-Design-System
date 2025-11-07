@@ -1,0 +1,5 @@
+.fdtc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border-radius:var(--radius-md);border:1px solid transparent;background:var(--color-primary);color:#fff;font:600 var(--fs-14)/1 var(--font-sans);cursor:pointer}
+.fdtc-btn--accent{background:var(--fdtc-sky-100);color:#03273f;border-color:#9fd0ef}
+.fdtc-btn--danger{background:var(--color-danger)}
+.fdtc-btn--sm{min-height:32px;padding:0 12px}
+.fdtc-btn:disabled{opacity:.6;cursor:not-allowed}

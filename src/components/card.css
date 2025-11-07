@@ -1,0 +1,5 @@
+.fdtc-card{display:flex;flex-direction:column;background:var(--color-surface);color:var(--color-surface-contrast);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:16px;min-height:100%}
+.fdtc-card__header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
+.fdtc-card__title{font:600 var(--fs-18)/1.2 var(--font-sans)}
+.fdtc-card__body{flex:1 1 auto;min-height:0}
+.fdtc-card__footer{margin-top:16px;display:flex;justify-content:flex-end;gap:8px}
