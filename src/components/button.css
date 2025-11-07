@@ -3,3 +3,36 @@
 .fdtc-btn--danger{background:var(--color-danger)}
 .fdtc-btn--sm{min-height:32px;padding:0 12px}
 .fdtc-btn:disabled{opacity:.6;cursor:not-allowed}
+/* Sizes */
+.fdtc-btn--lg{min-height:48px;padding:0 20px}
+
+/* Variants */
+.fdtc-btn--yellow{background:var(--fdtc-yellow);color:#002b49;border-color:#e7cf5d}
+.fdtc-btn--link{
+    background:transparent;border:0;min-height:auto;padding:0;
+    color:var(--color-primary);font-weight:600;text-decoration:none
+}
+.fdtc-btn--link:hover,.fdtc-btn--link:focus{ text-decoration:underline }
+
+/* Gate (landing) buttons */
+.fdtc-gate{display:inline-flex;align-items:center;justify-content:center;
+    padding:14px 20px;border-radius:12px;border:0;font:800 var(--fs-14)/1 var(--font-sans);
+    cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25);user-select:none
+}
+.fdtc-gate:focus-visible{outline:2px solid rgba(0,0,0,.35);outline-offset:3px}
+.fdtc-gate--blue{background:#def1fb;color:#002b49}
+.fdtc-gate--orange{background:#e95530;color:#000}
+
+/* Back button */
+.fdtc-back{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:12px;
+    border:0;background:#def1fb;color:#002b49;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.25)
+}
+
+/* “Term” buttons (list rows) */
+.fdtc-term{display:flex;align-items:center;justify-content:space-between;
+    border-radius:12px;padding:12px 14px;border:0;text-align:left;cursor:pointer;
+    user-select:none;pointer-events:auto;box-shadow:0 2px 6px rgba(0,0,0,.25)
+}
+.fdtc-term--ok{background:#f8df7a;color:#002b49}         /* yellow */
+.fdtc-term--overdue{background:#e95530;color:#000}      /* orange */
+.fdtc-term--total{background:#0078c9;color:#fff}        /* brand blue */
